@@ -34,11 +34,11 @@ Install the MySQL database server and required libraries:
 
     sudo apt-get install mysql-server libmysqlclient-dev
     
-To install mysql adapter mysql2, do:
+To install MySQL adapter mysql2, do:
 
     gem install mysql2
     
-Adding mysql as the default database on creation of a Rails application this will create the database.yml and add the correct database gem for in your Gemfile.
+Adding MySQL as the default database on creation of a Rails application this will create the database.yml and add the correct database gem for in your Gemfile.
 
     rails new application -d mysql
     
@@ -52,6 +52,31 @@ database: app_development
 username: root
 password:
 socket: /tmp/mysql.sock
+```
+
+### PostgreSQL
+
+Install the PostgreSQL database server and required libraries:
+
+    sudo apt-get install postgresql libpq-dev
+    
+To install PostgreSQL adapter pg, do:
+
+    gem install pg
+    
+Adding PostgreSQL as the default database on creation of a Rails application this will create the database.yml and add the correct database gem for in your Gemfile.
+
+    rails new application -d postgresql
+    
+An example of application/config/database.yml:
+
+```no-highlight
+development:
+adapter: postgresql
+encoding: utf8
+database: app_development
+username: root
+password:
 ```
 
 ## Reference
