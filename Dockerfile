@@ -31,7 +31,7 @@ RUN \
   rm -rf ruby-*
 
 
-echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
 # Install Ruby Gems
 RUN gem install bundler
