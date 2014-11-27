@@ -26,7 +26,9 @@ Do:
 
 
 ## Database Integration
-Database of your choice can easily be added to your rails application. SQLite can be used for development otherwise for production the preferred database choices are MySQL and PostgreSQL. Below are MySQL and PostgreSQL integration for your reference, the intergration takes the perspective of running the commands within the container.
+Database of your choice can easily be added to your rails application. SQLite can be used for development otherwise for production the preferred database choices are MySQL and PostgreSQL. Below are MySQL and PostgreSQL integration for your reference, the intergration takes the perspective of running the commands from within the container.
+
+Currently (with Docker 1.2), the first step is to install nsenter on the host. If you are a DCM user, please ssh into the instance to begin setting up a database and starting a rails applciation.
 
 ### MySQL
 
