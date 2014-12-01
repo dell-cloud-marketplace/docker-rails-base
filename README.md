@@ -26,60 +26,7 @@ Do:
 
 
 ## Database Integration
-Database of your choice can easily be added to your rails application. SQLite can be used for development otherwise for production the preferred database choices are MySQL and PostgreSQL. Below are MySQL and PostgreSQL integration for your reference, the intergration takes the perspective of running the commands from within the container.
-
-Currently (with Docker 1.2), the first step is to install nsenter on the host. If you are a DCM user, please ssh into the instance to begin setting up a database and starting a rails applciation.
-
-### MySQL
-
-Install the MySQL database server and required libraries:
-
-    sudo apt-get install mysql-server libmysqlclient-dev
-    
-To install MySQL adapter mysql2 from within the container, do:
-
-    gem install mysql2
-    
-Adding MySQL as the default database on creation of a Rails application will create the database.yml and add the correct database gem in your Gemfile. To create a new rails application with MySQL as the database run the following command from within the container:
-
-    rails new application -d mysql
-    
-An example of application/config/database.yml:
-
-```no-highlight
-development:
-adapter: mysql
-encoding: utf8
-database: app_development
-username: root
-password:
-socket: /tmp/mysql.sock
-```
-
-### PostgreSQL
-
-Install the PostgreSQL database server and required libraries:
-
-    sudo apt-get install postgresql libpq-dev
-    
-To install PostgreSQL adapter pg from within the container, do:
-
-    gem install pg
-    
-Adding PostgreSQL as the default database on creation of a Rails application will create the database.yml and add the correct database gem in your Gemfile. To create a new rails application with MySQL as the database run the following command from within the container:
-
-    rails new application -d postgresql
-    
-An example of application/config/database.yml:
-
-```no-highlight
-development:
-adapter: postgresql
-encoding: utf8
-database: app_development
-username: root
-password:
-```
+Database of your choice can easily be added to your rails application. This is a base image to evolve and build on and therefore the database server has been left to be installed at a later point.
 
 ## Reference
 
