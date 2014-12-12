@@ -12,19 +12,6 @@ Ubuntu        | Trusty     | Operating system
 Ruby          | 2.1.4      | Programming language
 Ruby on Rails | 4.1.6      | Web application framework
 
-## Usage
-
-### Start the container
-
-To start your container with:
-
-* A named container ("rails")
-
-Do:
-
-    sudo docker run -d -name rails dell/rails
-
-
 ## Database Integration
 Database of your choice can easily be added to your rails application. This is a base image to evolve and build on and therefore the database server has been left to be installed at a later point.
 
