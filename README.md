@@ -1,4 +1,6 @@
-#docker-rails
+#docker-rails-base
+A basic Ruby on Rails image for dependant images such as [dell/passengner-base](https://github.com/dell-cloud-marketplace/docker-passenger-base) and [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
+
 This is a base Docker image to run [Ruby on Rails](http://rubyonrails.org/) - is an open-source web application framework written in [Ruby]( https://www.ruby-lang.org/en/). The base image provides  a starting point in building Rails web applications.
 
 
