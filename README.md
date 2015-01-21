@@ -1,9 +1,5 @@
 #docker-rails-base
-A basic Ruby on Rails image for dependant images such as [dell/passengner-base](https://github.com/dell-cloud-marketplace/docker-passenger-base) and [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
-
-This is a base Docker image to run [Ruby on Rails](http://rubyonrails.org/) - is an open-source web application framework written in [Ruby]( https://www.ruby-lang.org/en/). The base image provides  a starting point in building Rails web applications.
-
-
+This is a basic Ruby on Rails image for dependent images such as [dell/passenger-base](https://github.com/dell-cloud-marketplace/docker-passenger-base) and [dell/spree](https://github.com/dell-cloud-marketplace/docker-spree).
 
 ## Components
 The software stack comprises the following components:
@@ -15,7 +11,7 @@ Ruby          | 2.1.4      | Programming language
 Ruby on Rails | 4.1.6      | Web application framework
 
 ## Database Integration
-Database of your choice can easily be added to your rails application. This is a base image to evolve and build on and therefore the database server has been left to be installed at a later point.
+This is a base image to evolve and build upon. Therefore the database server has been left to be installed at a later point.
 
 ## Reference
 
