@@ -6,17 +6,30 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
 RUN apt-get update && apt-get install -yq \
-   zlib1g-dev \
    build-essential \
-   libssl-dev \
-   libreadline-dev \
-   libyaml-dev \
-   libxml2-dev \
    libcurl4-openssl-dev \
-   python-software-properties
+   libffi-dev \
+   libreadline-dev \
+   libssl-dev \
+   libxml2-dev \
+   libxslt1-dev \
+   libyaml-dev \
+   python-software-properties \
+   zlib1g-dev
+
+# Ensure UTF-8
+RUN locale-gen en_US.UTF-8 && \
+    dpkg-reconfigure locales && \
+    export LC_ALL=en_US.UTF-8 && \
+    export LANGUAGE=en_US.UTF-8 && \
+    export LANG=en_US.UTF-8
+
+# Clean package cache
+RUN apt-get -y clean && rm -rf /var/lib/apt/lists/*
+
 
 # Install Ruby
-ADD http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.3.tar.gz /tmp/
+ADD http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.1.tar.gz /tmp/
 RUN \
   cd /tmp && \
   tar -xzvf ruby-*.tar.gz && \
@@ -34,7 +47,4 @@ RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 RUN gem install bundler
 
 # Install Rails
-RUN gem install rails -v 4.1.6
-
-# Expose Rails server port
-EXPOSE 3000
+RUN gem install rails -v 4.2

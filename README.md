@@ -7,8 +7,8 @@ The software stack comprises the following components:
 Name          | Version    | Description
 --------------|------------|------------------------------
 Ubuntu        | Trusty     | Operating system
-Ruby          | 2.1.4      | Programming language
-Ruby on Rails | 4.1.6      | Web application framework
+Ruby          | 2.2.1      | Programming language
+Ruby on Rails | 4.2.0      | Web application framework
 
 ## Database Integration
 This is a base image to evolve and build upon. Therefore the database server has been left to be installed at a later point.
